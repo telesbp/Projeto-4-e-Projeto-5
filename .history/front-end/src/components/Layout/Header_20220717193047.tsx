@@ -26,7 +26,7 @@ export function Header() {
         <Navbar fixed="top" expand="lg" bg={isTransparent ? undefined : "white"} >
         <Container fluid>
           <Navbar.Brand to="/" as={Link}>
-            <ImageStyle src={isTransparent ? LogoBrand : LogoBrandBlack} alt="MovArt" width={170} height={80}/>
+            <img src={isTransparent ? LogoBrand : LogoBrandBlack} alt="MovArt" width={170} height={80}/>
           </Navbar.Brand>
           <NavBarToggleStyled aria-controls="basic-navbar-nav">
             <FontAwesomeIcon icon={faBarsStaggered}  className={isTransparent ? "text-white" : "text-dark"} size="lg" />
@@ -70,8 +70,5 @@ const NavLinkStyled = styled(Nav.Link)`
 
 `
 const ImageStyle = styled.img`
-    @media (min-width: 992px){
-       width: 226px;
-       height: auto;
-    }
+    
 `

@@ -71,7 +71,7 @@ const NavLinkStyled = styled(Nav.Link)`
 `
 const ImageStyle = styled.img`
     @media (min-width: 992px){
-       width: 226px;
+       width: 226px ;
        height: auto;
     }
 `
