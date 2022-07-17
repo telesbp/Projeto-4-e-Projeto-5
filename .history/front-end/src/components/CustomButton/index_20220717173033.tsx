@@ -35,30 +35,19 @@ const ButtonStyled = styled(Button)`
         font-size: 1.125rem;
     `}
     ${props => (props.variant === "primary" || !props.variant) && `
-        background-color: #606c38;
-        border-color: #606c38;
-        color: #fafafa!important;        
+        background-color: #dda15e;
+        border-color: #dda15e;
         &:hover {
             background-color: #283618;
             border-color: #283618;
         }
     `}
     ${props => (props.variant === "outline-primary" || !props.variant) && `
-        border-color: #283618;
-        color: #283618;
-        &:hover {
-            background-color: #283618;
-            border-color: #283618;
-            color: #fafafa;
-        }
-    `}
-    ${props => (props.variant === "outline-secundary" || !props.variant) && `
         border-color: #fafafa;
         color: #fafafa;
         &:hover {
-            background-color: #283618;
-            border-color: #283618;
-            color: #fafafa;
+            background-color: #dda15e;
+            border-color: #dda15e;
         }
     `}
 `

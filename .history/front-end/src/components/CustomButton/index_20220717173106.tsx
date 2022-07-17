@@ -37,7 +37,6 @@ const ButtonStyled = styled(Button)`
     ${props => (props.variant === "primary" || !props.variant) && `
         background-color: #606c38;
         border-color: #606c38;
-        color: #fafafa!important;        
         &:hover {
             background-color: #283618;
             border-color: #283618;
@@ -47,18 +46,8 @@ const ButtonStyled = styled(Button)`
         border-color: #283618;
         color: #283618;
         &:hover {
-            background-color: #283618;
-            border-color: #283618;
-            color: #fafafa;
-        }
-    `}
-    ${props => (props.variant === "outline-secundary" || !props.variant) && `
-        border-color: #fafafa;
-        color: #fafafa;
-        &:hover {
-            background-color: #283618;
-            border-color: #283618;
-            color: #fafafa;
+            background-color: #606c38;
+            border-color: #606c38;
         }
     `}
 `

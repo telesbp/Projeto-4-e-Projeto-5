@@ -31,6 +31,7 @@ const ButtonStyled = styled(Button)`
     border-radius: 50px;
     font-weight: 500;
     padding:5px 50px 5px 50px;
+    min-height: max-content;
     ${props => props.size ==='lg' && `
         font-size: 1.125rem;
     `}
@@ -46,15 +47,6 @@ const ButtonStyled = styled(Button)`
     ${props => (props.variant === "outline-primary" || !props.variant) && `
         border-color: #283618;
         color: #283618;
-        &:hover {
-            background-color: #283618;
-            border-color: #283618;
-            color: #fafafa;
-        }
-    `}
-    ${props => (props.variant === "outline-secundary" || !props.variant) && `
-        border-color: #fafafa;
-        color: #fafafa;
         &:hover {
             background-color: #283618;
             border-color: #283618;

@@ -10,8 +10,8 @@ export function HomeView(){
             <Banner className="vh-100">
                 <Container className="h-100 d-flex flex-column justify-content-center align-items-center align-items-lg-start">
                     <Title className="text-center text-white text-lg-start mt-auto mt-lg-0 ">Um lugar para chamar de LAR!</Title>
-                    <CustomButton size="lg" to="login" variant="primary" className="mt-auto mt-lg-3 mb-2">Tenho uma conta</CustomButton>
-                    <CustomButton size="lg" to="cadastro" variant="outline-primary" className="mb-4">Criar nova conta</CustomButton>
+                    <CustomButton size="lg" to="login" variant="primary" className="mt-auto mt-lg-3 mb-2">Fazer Login</CustomButton>
+                    <CustomButton size="lg" to="cadastro" variant="outline-primary" className="mb-4">Criar Conta</CustomButton>
                 </Container>
             </Banner>
         </Layout>
