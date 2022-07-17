@@ -1,4 +1,3 @@
-import { faFacebookSquare } from "@fortawesome/free-brands-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Button, Container } from "react-bootstrap";
 import { toast } from "react-toastify";
@@ -9,7 +8,7 @@ export function HomeView(){
     <Container>     
         <Title>Stagio</Title>
         <Button onClick={() => toast.success("oi")}>teste</Button>
-        <FontAwesomeIcon icon={faFacebookSquare} />
+        <FontAwesomeIcon icon={fa-solid fa-circle-half-stroke} />
     </Container>
     )
 }
