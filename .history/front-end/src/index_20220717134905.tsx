@@ -5,7 +5,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import { BrowserRouter } from 'react-router-dom';
 import 'react-toastify/dist/ReactToastify.css';
 import { ToastContainer } from 'react-toastify';
-import { GlobalStyle } from './assets/css/global';
+import { GlobalStyle } from './assets/img/css/global';
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
