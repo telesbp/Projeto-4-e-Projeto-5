@@ -1,8 +1,8 @@
-import { Routes } from "./routes";
+import { HomeView } from "./views/Home";
 
 function App() {
   return (
-    <Routes/>
+    <HomeView/>
   );
 }
 
