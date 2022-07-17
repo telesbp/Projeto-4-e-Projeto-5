@@ -1,31 +1,21 @@
 import { Button, ButtonProps, Spinner } from "react-bootstrap";
-import { LinkContainer } from "react-router-bootstrap";
 import styled from "styled-components";
 
 type Props = ButtonProps & {
     loading?: boolean
-    to?: string
 }
 
-export function CustomButton({children, loading, to, ...otherProps}: Props) {
-    const button = (
+export function CustomButton({children, loading, ...otherProps}: Props) {
+    return(
         <ButtonStyled {...otherProps}>
             {loading && (
-                <Spinner animation="border" role="status" size="sm" className="me-2">
+                <Spinner animation="border" role="status" size="sm">
                     <span className="visually-hidden">Carregando...</span>
                 </Spinner>
             )}
             {children}
         </ButtonStyled>
     )
-    if (to){
-        return(
-            <LinkContainer to={to}>
-                {button}
-            </LinkContainer>
-        )
-    }
-    return button
 }
 const ButtonStyled = styled(Button)`
     border-radius: 50px;

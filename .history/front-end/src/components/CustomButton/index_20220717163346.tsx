@@ -20,7 +20,7 @@ export function CustomButton({children, loading, to, ...otherProps}: Props) {
     )
     if (to){
         return(
-            <LinkContainer to={to}>
+            <LinkContainer>
                 {button}
             </LinkContainer>
         )
