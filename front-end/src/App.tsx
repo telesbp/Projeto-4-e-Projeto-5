@@ -1,12 +1,17 @@
 import { Button, Container } from "react-bootstrap";
+import styled  from "styled-components";
 
 function App() {
   return (
-    <Container>     
+    <ContainerStyled>     
       <p>teste</p>
       <Button>teste</Button>
-    </Container>
+    </ContainerStyled>
   );
 }
 
 export default App;
+
+const ContainerStyled = styled(Container)`
+background-color: blue;
+`
