@@ -1,4 +1,4 @@
-import { Container } from "react-bootstrap";
+import { Button, Container } from "react-bootstrap";
 import styled from "styled-components";
 import bgSite from "../../assets/img/cadeira1.png"
 import { CustomButton } from "../../components/CustomButton";
