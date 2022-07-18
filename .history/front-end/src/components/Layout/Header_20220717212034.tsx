@@ -1,3 +1,4 @@
+import { faBlackTie } from "@fortawesome/free-brands-svg-icons";
 import { faBarsStaggered } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useEffect, useState } from "react";
@@ -22,14 +23,17 @@ export function Header() {
             window.removeEventListener("scroll", scrollChange)
         }
     },[isTransparent])
+    const bgcustom = {
+        background: black;
+    }
     return(
-        <NavBarStyle fixed="top" expand="lg" bg={isTransparent ? undefined : "white"}>
+        <Navbar fixed="top" expand="lg" bg={isTransparent ? undefined : bgcustom} >
         <Container fluid>
           <Navbar.Brand to="/" as={Link}>
-            <ImageStyle src={LogoBrand} alt="MovArt" width={170} height={80}/>
+            <ImageStyle src={isTransparent ? LogoBrand : LogoBrandBlack} alt="MovArt" width={170} height={80}/>
           </Navbar.Brand>
           <NavBarToggleStyled aria-controls="basic-navbar-nav">
-            <FontAwesomeIcon icon={faBarsStaggered}  className="text-white" size="lg" />
+            <FontAwesomeIcon icon={faBarsStaggered}  className={isTransparent ? "text-white" : "text-dark"} size="lg" />
             </NavBarToggleStyled>
         <NavBarCollapseStyled id="basic-navbar-nav">
           <Nav className="ms-auto">
@@ -49,17 +53,9 @@ export function Header() {
             </Form>
           </NavBarCollapseStyled>
         </Container>
-      </NavBarStyle>
+      </Navbar>
     )
 }
-const NavBarStyle = styled(Navbar)`
-    transition: all 0.3s linear;
-    ${props => props.bg === "white" && `
-        box-shadow: 0 2px 4px rgba(0, 0, 0, .25);
-        background: #A3B18A!important;
-    `}
-  
-`
 const NavBarToggleStyled = styled(Navbar.Toggle)`
     border:none;
 `

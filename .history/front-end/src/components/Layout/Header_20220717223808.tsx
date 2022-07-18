@@ -26,10 +26,10 @@ export function Header() {
         <NavBarStyle fixed="top" expand="lg" bg={isTransparent ? undefined : "white"}>
         <Container fluid>
           <Navbar.Brand to="/" as={Link}>
-            <ImageStyle src={LogoBrand} alt="MovArt" width={170} height={80}/>
+            <ImageStyle src={isTransparent ? LogoBrand : LogoBrandBlack} alt="MovArt" width={170} height={80}/>
           </Navbar.Brand>
           <NavBarToggleStyled aria-controls="basic-navbar-nav">
-            <FontAwesomeIcon icon={faBarsStaggered}  className="text-white" size="lg" />
+            <FontAwesomeIcon icon={faBarsStaggered}  className={isTransparent ? "text-white" : "text-dark"} size="lg" />
             </NavBarToggleStyled>
         <NavBarCollapseStyled id="basic-navbar-nav">
           <Nav className="ms-auto">
@@ -56,7 +56,6 @@ const NavBarStyle = styled(Navbar)`
     transition: all 0.3s linear;
     ${props => props.bg === "white" && `
         box-shadow: 0 2px 4px rgba(0, 0, 0, .25);
-        background: #A3B18A!important;
     `}
   
 `

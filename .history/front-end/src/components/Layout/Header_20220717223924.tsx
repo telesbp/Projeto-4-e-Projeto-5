@@ -29,7 +29,7 @@ export function Header() {
             <ImageStyle src={LogoBrand} alt="MovArt" width={170} height={80}/>
           </Navbar.Brand>
           <NavBarToggleStyled aria-controls="basic-navbar-nav">
-            <FontAwesomeIcon icon={faBarsStaggered}  className="text-white" size="lg" />
+            <FontAwesomeIcon icon={faBarsStaggered}  className={isTransparent ? "text-white" : "text-dark"} size="lg" />
             </NavBarToggleStyled>
         <NavBarCollapseStyled id="basic-navbar-nav">
           <Nav className="ms-auto">
