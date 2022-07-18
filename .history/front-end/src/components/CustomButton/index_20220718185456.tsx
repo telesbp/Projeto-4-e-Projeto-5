@@ -44,7 +44,6 @@ const ButtonStyled = styled(Button)`
         }
     `}
     ${props => (props.variant === "outline-primary" || !props.variant) && `
-        background:#DAD7CD;
         border-color: #DAD7CD;
         color: #344E41;
         &:hover {

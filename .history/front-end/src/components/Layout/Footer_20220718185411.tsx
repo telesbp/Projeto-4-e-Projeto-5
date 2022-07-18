@@ -39,16 +39,13 @@ const FooterStyled = styled.footer`
     }
 `
 const NavLinkTitleStyled = styled(Nav.Link)`
-    color:#DAD7CD;
+    color:#344E41;
     &:hover{
-        color:#344E41; 
+        color:#DAD7CD; 
     }
 `
 const FontAwesomeIconStyle = styled(FontAwesomeIcon)`
-    color: #DAD7CD;
+    color: #344E41;
     width: 30px;
     height: auto;
-    &:hover{
-        color:#344E41; 
-    }
 `

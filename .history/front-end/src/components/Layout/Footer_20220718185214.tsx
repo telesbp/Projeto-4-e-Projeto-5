@@ -8,15 +8,15 @@ import LogoBrand from "../../assets/img/logobranca.png"
 export function Footer () {
     return(
         <FooterStyled>
-            <Container className="d-flex p-4 justify-content-center align-items-center">
+            <Container className="d-flex p-4  align-items-center">
                 <Link to="/" className="me-lg-auto" >
                     <img src={LogoBrand} alt="MovArt" width={170} height={80}/>
                 </Link>
                 <Nav className="flex-column flex-lg-row mx-5">
-                    <NavLinkTitleStyled className="mx-lg-2" as={Link} to="/">Início</NavLinkTitleStyled >
-                    <NavLinkTitleStyled className="mx-lg-2"  as={Link} to="/">Catálogo</NavLinkTitleStyled >
-                    <NavLinkTitleStyled className="mx-lg-2"  as={Link} to="/">Sobre nós</NavLinkTitleStyled >
-                    <NavLinkTitleStyled className="mx-lg-2"  as={Link} to="/">Termos e Serviços</NavLinkTitleStyled >
+                    <NavLinkTitleStyled  as={Link} to="/">Início</NavLinkTitleStyled >
+                    <NavLinkTitleStyled  as={Link} to="/">Catálogo</NavLinkTitleStyled >
+                    <NavLinkTitleStyled  as={Link} to="/">Sobre nós</NavLinkTitleStyled >
+                    <NavLinkTitleStyled  as={Link} to="/">Termos e Serviços</NavLinkTitleStyled >
                 </Nav>
                 <Nav>
                     <Nav.Link href="http://facebook.com" target="_blank">
@@ -39,16 +39,13 @@ const FooterStyled = styled.footer`
     }
 `
 const NavLinkTitleStyled = styled(Nav.Link)`
-    color:#DAD7CD;
+    color:#344E41;
     &:hover{
-        color:#344E41; 
+        color:#DAD7CD; 
     }
 `
 const FontAwesomeIconStyle = styled(FontAwesomeIcon)`
-    color: #DAD7CD;
+    color: #344E41;
     width: 30px;
     height: auto;
-    &:hover{
-        color:#344E41; 
-    }
 `

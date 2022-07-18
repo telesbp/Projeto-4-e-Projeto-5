@@ -48,7 +48,4 @@ const FontAwesomeIconStyle = styled(FontAwesomeIcon)`
     color: #DAD7CD;
     width: 30px;
     height: auto;
-    &:hover{
-        color:#344E41; 
-    }
 `
