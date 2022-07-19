@@ -24,9 +24,6 @@ export const Layout: React.FC<Props> = ({children, startTransparent}) => {
 
 const MainStyled = styled.main<MainProps>`
     ${props => !props.startTransparent && `
-        padding-top: 90px;
-        @media (min-width: 992px){
-            padding-top: 139px;
-        }
+        padding-top: 139px;
     `}
 `

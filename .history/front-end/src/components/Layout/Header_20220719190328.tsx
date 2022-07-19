@@ -16,7 +16,7 @@ export function Header( { startTransparent = false } : Props ) {
     useEffect(() => { 
         const scrollChange = () => {
             const isLowScroll = window.scrollY < 60
-            if (startTransparent && isLowScroll !== isTransparent){
+            if (isLowScroll !== isTransparent){
             setIsTransparent(isLowScroll)
         }
         } 
@@ -24,7 +24,7 @@ export function Header( { startTransparent = false } : Props ) {
         return () => {
             window.removeEventListener("scroll", scrollChange)
         }
-    },[isTransparent, startTransparent])
+    },[isTransparent])
     return(
         <NavBarStyle fixed="top" expand="lg" bg={isTransparent ? undefined : "white"}>
         <Container fluid>

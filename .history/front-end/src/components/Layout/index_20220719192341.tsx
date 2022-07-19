@@ -6,8 +6,10 @@ type Props = {
     children: React.ReactNode
     startTransparent?: boolean
 }
+type MainProps={
+    startTransparent?: boolean
+}
 
-type MainProps = Pick<Props, "startTransparent">
 
 export const Layout: React.FC<Props> = ({children, startTransparent}) => {
     return (
@@ -20,13 +22,8 @@ export const Layout: React.FC<Props> = ({children, startTransparent}) => {
         </>
     )
 }
-
-
 const MainStyled = styled.main<MainProps>`
-    ${props => !props.startTransparent && `
-        padding-top: 90px;
-        @media (min-width: 992px){
-            padding-top: 139px;
-        }
+    ${props => props.startTransparent && `
+        padding-top: 139px;
     `}
 `

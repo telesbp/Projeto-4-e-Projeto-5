@@ -7,26 +7,24 @@ type Props = {
     startTransparent?: boolean
 }
 
-type MainProps = Pick<Props, "startTransparent">
+
 
 export const Layout: React.FC<Props> = ({children, startTransparent}) => {
     return (
         <>
             <Header startTransparent={startTransparent}/>
-            <MainStyled startTransparent={startTransparent}>
+            <MainStyled>
                 {children}
             </MainStyled>
             <Footer/>
         </>
     )
 }
-
-
+type MainProps = {
+    startTransparent?: boolean
+}
 const MainStyled = styled.main<MainProps>`
-    ${props => !props.startTransparent && `
-        padding-top: 90px;
-        @media (min-width: 992px){
-            padding-top: 139px;
-        }
+    ${props => props.startTransparent && `
+        padding-top: 139px;
     `}
 `
