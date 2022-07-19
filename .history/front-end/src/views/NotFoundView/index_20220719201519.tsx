@@ -22,6 +22,6 @@ const PStyle = styled.p`
 `
 const ContainerBannerStyled = styled(Container)`
     background: url(${bg404}) no-repeat center center;
-    background-size: contain;
+    background-size: cover;
     height: 100%;
 `

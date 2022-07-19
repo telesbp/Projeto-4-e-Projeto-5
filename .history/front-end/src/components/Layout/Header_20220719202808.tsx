@@ -38,8 +38,8 @@ export function Header( { startTransparent = false } : Props ) {
           <Nav className="ms-auto">
             <NavLinkStyled forwardedAs={Link} to="/" className="justify-contend-center text-center">Início</NavLinkStyled>
             <NavLinkStyled forwardedAs={Link} to="/catálogo" className="justify-contend-center text-center">Catálogo</NavLinkStyled>
-            <CustomButton className="mt-2 mt-lg-0 ms-lg-4" variant="primary" to="/login">Tenho uma conta</CustomButton>
-            <CustomButton className="mt-2 mt-lg-0 ms-lg-4" variant="primary" to="/register">Criar nova conta</CustomButton>
+            <CustomButton className="mt-2 mt-lg-0 ms-lg-4" variant="primary" to="/register">Tenho uma conta</CustomButton>
+            <CustomButton className="mt-2 mt-lg-0 ms-lg-4" variant="primary" to="/login">Criar nova conta</CustomButton>
         </Nav>
             <Form className="d-flex">
               <Form.Control
