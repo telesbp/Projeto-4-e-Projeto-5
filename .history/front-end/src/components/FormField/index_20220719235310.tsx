@@ -6,19 +6,13 @@ type Props ={
     label?: string
     error?: string
     mask?: {mask: string}[]
-    onAccept?: (value: unknown) => void
 } & FormControlProps
 
-export function FormField({controlId, error, label, mask, onAccept, ...inputProps}: Props){
+export function FormField({controlId, error, label, mask, ...inputProps}: Props){
     return(
     <Form.Group className="mb-3" controlId={controlId}>
         {label && <Form.Label className="mb-1">{label}</Form.Label>}
-        {mask ? (<Form.Control {...inputProps} 
-        as={IMaskInput}
-        mask={mask}
-        onChange={undefined}
-        onAccept={onAccept}
-        />) : 
+        {mask ? (<Form.Control {...inputProps} as={IMaskInput} mask={mask} />) : 
         (<Form.Control {...inputProps}/>) }
         <Form.Control.Feedback type="invalid">
             {error}
