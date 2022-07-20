@@ -9,10 +9,7 @@ export function RegisterView(){
             <Container>
                 <PageTitle>Nova Conta</PageTitle>
                 <FormField controlId="userName"
-                label="Nome"
-                placeholder="Digite seu nome"
-                error="Preencha seu nome. "
-                isInvalid/>
+                label="Nome"/>
             </Container>            
         </Layout>
     )

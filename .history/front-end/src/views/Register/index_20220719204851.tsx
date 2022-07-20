@@ -11,7 +11,7 @@ export function RegisterView(){
                 <FormField controlId="userName"
                 label="Nome"
                 placeholder="Digite seu nome"
-                error="Preencha seu nome. "
+                error="Preencha seu nome."
                 isInvalid/>
             </Container>            
         </Layout>
