@@ -36,8 +36,8 @@ export function RegisterView(){
             .required('Preencha o telefone.'),
           password: yup.string()
             .required('Preencha a senha.')
-            .min(6, 'Informe pelo menos 6 caractéres.')
-            .max(30, 'Informe no máximo 30 caractéres.'),
+            .min(8, 'Informe pelo menos 8 caractéres.')
+            .max(50, 'Informe no máximo 50 caractéres.'),
           agree: yup.boolean()
             .equals([true], 'É preciso aceitar os termos.')
         }),
@@ -85,24 +85,17 @@ export function RegisterView(){
                             }
                             onAccept={value => formik.setFieldValue("phone", value)} />
                             <FormField
-                                label="Senha"
-                                placeholder="Digite uma senha"
-                                {... getFieldProps("password")}
-                                type="password" 
-                            />
+                            label="Senha"
+                            placeholder="Digite uma senha"
+                            {... getFieldProps("password")}
+                            type="password" />
                             <Form.Group className="mb-3"
                                 controlId="input-agree" >
                                 <FormCheck
-                                    {... getFieldProps("agree")}
-                                    type="checkbox"
-                                    label={<>Eu li e aceito os <a href="/" target="blank">Termos de uso</a>!</>} /> 
-                            
-                                {formik.touched.agree && formik.errors.agree && (
-                                    <Form.Control.Feedback type='invalid' className='d-block'>
-                                        {formik.errors.agree}
-                                    </Form.Control.Feedback>
-                                    )}
-                            </Form.Group>
+                                {... getFieldProps("agree")}
+                                type="checkbox"
+                                label={<>Eu li e aceito os <a href="/" target="blank">Termos de uso</a>!</>} /> 
+                                </Form.Group>
                                 <div className="d-grid mb-4">
                                     <CustomButton variant="primary" type="submit">Criar conta</CustomButton>
                                 </div>

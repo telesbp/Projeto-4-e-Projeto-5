@@ -6,7 +6,6 @@ import { FormField } from "../../components/FormField"
 import { Layout } from "../../components/Layout"
 import { PageTitle } from "../../components/PageTitle"
 import * as yup from "yup"
-import { Console } from "console"
 
 type FormValues ={
     name: string
@@ -26,30 +25,17 @@ export function RegisterView(){
             agree: false
         },
         validationSchema: yup.object().shape({
-            name: yup.string()
-            .required('Preencha o nome.')
-            .min(5, 'Informe pelo menos 5 caractéres.'),
-          email: yup.string()
-            .required('Preencha o e-mail.')
-            .email('Preencha um e-mail válido.'),
-          phone: yup.string()
-            .required('Preencha o telefone.'),
-          password: yup.string()
-            .required('Preencha a senha.')
-            .min(6, 'Informe pelo menos 6 caractéres.')
-            .max(30, 'Informe no máximo 30 caractéres.'),
-          agree: yup.boolean()
-            .equals([true], 'É preciso aceitar os termos.')
-        }),
-        onSubmit: (values) => {
-                 console.log("teste", values)
+            name: yup.string().required().min(5)
+        })
+        onSubmit: (values) =>{
+          if (!values.name){                  
         }
     })
     
     const getFieldProps = (fieldName: keyof FormValues) =>{
         return{
-            ...formik.getFieldProps(fieldName),
-            controlId: `input-${fieldName}`,
+            ... formik.getFieldProps(fieldName),
+            controlId: `input-${fieldName}` ,
             error: formik.errors[fieldName],
             isInvalid: formik.touched[fieldName] && !!formik.errors[fieldName],
             isValid: formik.touched[fieldName] && !formik.errors[fieldName] 
@@ -85,24 +71,17 @@ export function RegisterView(){
                             }
                             onAccept={value => formik.setFieldValue("phone", value)} />
                             <FormField
-                                label="Senha"
-                                placeholder="Digite uma senha"
-                                {... getFieldProps("password")}
-                                type="password" 
-                            />
+                            label="Senha"
+                            placeholder="Digite uma senha"
+                            {... getFieldProps("password")}
+                            type="password" />
                             <Form.Group className="mb-3"
                                 controlId="input-agree" >
                                 <FormCheck
-                                    {... getFieldProps("agree")}
-                                    type="checkbox"
-                                    label={<>Eu li e aceito os <a href="/" target="blank">Termos de uso</a>!</>} /> 
-                            
-                                {formik.touched.agree && formik.errors.agree && (
-                                    <Form.Control.Feedback type='invalid' className='d-block'>
-                                        {formik.errors.agree}
-                                    </Form.Control.Feedback>
-                                    )}
-                            </Form.Group>
+                                {... getFieldProps("agree")}
+                                type="checkbox"
+                                label={<>Eu li e aceito os <a href="/" target="blank">Termos de uso</a>!</>} /> 
+                                </Form.Group>
                                 <div className="d-grid mb-4">
                                     <CustomButton variant="primary" type="submit">Criar conta</CustomButton>
                                 </div>
