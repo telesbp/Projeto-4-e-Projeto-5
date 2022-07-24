@@ -18,7 +18,7 @@ a{
     color: #344E41;
 }
 a:hover{
-    color: #a3b18b;
+    color: #344E41;
 }
 
 `

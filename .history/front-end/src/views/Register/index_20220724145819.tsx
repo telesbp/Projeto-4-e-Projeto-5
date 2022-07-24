@@ -9,9 +9,9 @@ export function RegisterView(){
     return(
         <Layout>
             <Container>
-                <Row className="justify-content-center">
+                <Row>
                     <Col lg={4}>
-                        <PageTitle>Nova Conta</PageTitle>
+
                         <Form>
                         <FormField
                         label="Nome"
@@ -49,7 +49,8 @@ export function RegisterView(){
                             <p className="text-center">Já possui uma conta? <Link to="/login">Faça Login.</Link></p>
                     </Form>
                     </Col>
-                </Row>                               
+                </Row>
+                <PageTitle>Nova Conta</PageTitle>               
             </Container>            
         </Layout>
     )

@@ -9,7 +9,7 @@ export function RegisterView(){
     return(
         <Layout>
             <Container>
-                <Row className="justify-content-center">
+                <Row>
                     <Col lg={4}>
                         <PageTitle>Nova Conta</PageTitle>
                         <Form>
