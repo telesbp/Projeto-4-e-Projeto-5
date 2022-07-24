@@ -6,32 +6,24 @@ import { FormField } from "../../components/FormField"
 import { Layout } from "../../components/Layout"
 import { PageTitle } from "../../components/PageTitle"
 
-type FormValues ={
-    name: string
-    email: string
-    phone: string
-    password: string
-    agree: boolean
-}
-
 export function RegisterView(){
-    const formik = useFormik<FormValues>({
+    const formik = useFormik({
         initialValues: {
             name: "",
             email: "",
             phone: "",
-            password: "",
+            passwor: "",
             agree: false
         },
         onSubmit: () =>{
 
         }
     })
-    const getFieldProps = (fieldName: keyof FormValues) =>{
-        return{
+    const getFieldProps = (fieldName) =>{
+        return(
             ... formik.getFieldProps(fieldName),
             controlId: `input-${fieldName}`
-        }
+        )
     }
     return(
         <Layout>
@@ -43,34 +35,34 @@ export function RegisterView(){
                             <FormField
                             label="Nome"
                             placeholder="Digite seu nome completo"
-                            {... getFieldProps("name")}
+                            {... formik.getFieldProps("name")}
                             />
                             <FormField
                             label="E-mail"
                             placeholder="Digite seu e-mail"
                             type="email" 
-                            {... getFieldProps("email")}
+                            {... formik.getFieldProps("email")}
                             />
                             <FormField
                             label="Telefone"
                             placeholder="(00) 00000-0000"
-                            {... getFieldProps("phone")} 
+                            {... formik.getFieldProps("phone")} 
                             mask={
                                 [
                                     {mask: "(00) 0000-0000"},
                                     {mask: "(00) 00000-0000"},
                                 ]
                             }
-                            onAccept={value => formik.setFieldValue("phone", value)} />
+                            onAccept={value => Formik.setFieldValue("phone", value)} />
                             <FormField
                             label="Senha"
                             placeholder="Digite uma senha"
-                            {... getFieldProps("password")}
+                            {... formik.getFieldProps("password")}
                             type="password" />
                             <Form.Group className="mb-3"
                                 controlId="input-agree" >
                                 <FormCheck
-                                {... getFieldProps("agree")}
+                                {... formik.getFieldProps("agree")}
                                 type="checkbox"
                                 label={<>Eu li e aceito os <a href="/" target="blank">Termos de uso</a>!</>} /> 
                                 </Form.Group>
